@@ -6,16 +6,15 @@ buildscript {
     ext.retrofit_version = '2.4.0'
     repositories {
         //阿里云镜像
-        maven {
-            url 'https://maven.aliyun.com/repository/public/'
-        }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
         mavenLocal()
         mavenCentral()
-        google()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+//        google()
+//        maven {
+//            url 'https://maven.google.com/'
+//            name 'Google'
+//        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.4'
@@ -30,17 +29,16 @@ buildscript {
 allprojects {
     repositories {
         //阿里云镜像
-        maven {
-            url 'https://maven.aliyun.com/repository/public/'
-        }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
         mavenLocal()
         mavenCentral()
-        google()
+//        google()
         maven { url "https://jitpack.io" }
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+//        maven {
+//            url 'https://maven.google.com/'
+//            name 'Google'
+//        }
     }
 //    gradle.projectsEvaluated {
 //        tasks.withType(JavaCompile) {
